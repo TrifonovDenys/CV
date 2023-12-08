@@ -1,7 +1,9 @@
+import Header from './components/Header/Header';
+
 const App = () => {
   return (
     <>
-      <p className='text-3xl font-bold underline'>cv</p>
+      <Header />
     </>
   );
 };
