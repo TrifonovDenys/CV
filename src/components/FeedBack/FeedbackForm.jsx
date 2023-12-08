@@ -4,7 +4,7 @@ const FeedbackForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    // formState: { errors },
   } = useForm();
 
   return (

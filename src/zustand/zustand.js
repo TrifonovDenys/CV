@@ -1,12 +1,18 @@
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware'
+import { devtools } from 'zustand/middleware'
 
-export const useBearStore = create((set) => ({
-  data: {
-    myMail: 'trifonowden123@gmail.com',
-    toMail: '',
-    subject: '',
-    message: '',
-  },
-  changeData: () => set((state) => ({ subject: state.subject + 1 })),
-  removeAllBears: () => set({ bears: 0 }),
-}));
+export const useSideFormStore = create(
+  persist(
+    devtools((set) => ({
+      sideForm: false,
+      toggleSideForm: () => set(({ sideForm }) => ({ sideForm: !sideForm })),
+    }), {
+      name: 'sideForm',
+    }),
+    {
+      name: 'sideForm',
+      version: 1,
+    }
+  )
+);
