@@ -1,4 +1,4 @@
-import { useSideFormStore } from '../../zustand/zustand';
+import { useSideFormStore } from '../../zustand/sideForm';
 import FeedbackForm from '../FeedBack/feedbackForm';
 import LetterSvg from "./Svg/LetterSvg"
 import CrossSvg from "./Svg/CrossSvg"
