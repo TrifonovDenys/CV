@@ -8,7 +8,7 @@ const ExpEdItem = () => {
     <ol className='relative border-s border-gray-200 dark:border-gray-700'>
       <li className='mb-10 ms-6'>
         <span className='absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900'>
-          <ExpSvg />
+          <EdSvg />
         </span>
         <h3 className='flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
           IT School GoIT{' '}
@@ -30,7 +30,7 @@ const ExpEdItem = () => {
       </li>
       <li className='mb-10 ms-6'>
         <span className='absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900'>
-          <EdSvg />
+          <ExpSvg />
         </span>
         <h3 className='mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
           Biostrategy{' '}
