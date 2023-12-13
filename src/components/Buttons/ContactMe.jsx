@@ -10,6 +10,7 @@ const ContactMe = () => {
         data-drawer-target='drawer-body-scrolling'
         data-drawer-show='drawer-body-scrolling'
         data-drawer-body-scrolling='true'
+        data-drawer-backdrop='false'
         aria-controls='drawer-body-scrolling'
         onClick={toggleSideForm}
       >
