@@ -7,7 +7,7 @@ export const hardSkills = [
   'Zustand',
   'Git',
   'Figma',
-  'TailWInd',
+  'TailWind',
   'Rest API',
   'Node.js',
   'MongoDB',
