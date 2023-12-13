@@ -9,15 +9,15 @@ const CarouselImg = () => {
   return (
     <Carousel>
       <div>
-        <img src={`${img1}`} />
+        <img src={`${img1}`} loading='lazy' />
         <p className='legend'>Page 1</p>
       </div>
       <div>
-        <img src={`${img2}`} />
+        <img src={`${img2}`} loading='lazy' />
         <p className='legend'>Page 2</p>
       </div>
       <div>
-        <img src={`${img3}`} />
+        <img src={`${img3}`} loading='lazy' />
         <p className='legend'>Page 3</p>
       </div>
     </Carousel>
