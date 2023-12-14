@@ -24,7 +24,7 @@ const ScrollUp = () => {
       type='button'
       data-te-ripple-init
       data-te-ripple-color='light'
-      className={`!fixed bottom-5 right-5 rounded-full p-3 text-xs font-medium uppercase leading-tight text-white dark:text-gray-900 hover:text-white dark:hover:text-white shadow-md transition duration-150 ease-in-out dark:bg-blue-100 bg-blue-950 hover:bg-red-700 hover:shadow-lg dark:hover:bg-red-700 dark:hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg ${
+      className={`!fixed bottom-5 right-5 opacity-60 md:opacity-100 md:bottom-20 md:right-5 rounded-full p-3 text-xs font-medium uppercase leading-tight text-white dark:text-gray-900 hover:text-white dark:hover:text-white shadow-md transition duration-150 ease-in-out dark:bg-blue-100 bg-blue-950 hover:bg-red-700 hover:shadow-lg dark:hover:bg-red-700 dark:hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg ${
         isVisible ? '' : 'hidden'
       }`}
       onClick={() => backToTop()}

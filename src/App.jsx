@@ -10,6 +10,7 @@ import { useSideFormStore } from './zustand/sideForm';
 import { useColorSchemeStore } from './zustand/theme';
 import { useModalStore } from './zustand/useModal';
 import ScrollUp from './components/ScrollUp/ScrollUp';
+import ToggleTheme from './components/Buttons/ToggleTheme';
 const App = () => {
   const { currentColorScheme } = useColorSchemeStore();
   const { sideForm } = useSideFormStore();
@@ -30,6 +31,7 @@ const App = () => {
         </main>
         <ContactDrawer />
       </div>
+      <ToggleTheme />
       <ScrollUp />
     </div>
   );
