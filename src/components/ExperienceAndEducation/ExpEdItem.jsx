@@ -23,7 +23,7 @@ const ExpEdItem = () => {
         </p>
         <button
           onClick={toggleModal}
-          className='inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-400 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700'
+          className='inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700'
         >
           <ViewSvg /> View certificate
         </button>
@@ -41,7 +41,7 @@ const ExpEdItem = () => {
         <time className='block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>IT department | oct 2020</time>
         <p className='text-base font-normal text-gray-500 dark:text-gray-400'>
           I excel in website programming, specializing in HTML, CSS, JavaScript, and WordPress. My role includes crafting compelling HTML emails,
-          overseeing a medical education platform's functionality and content. In the IT department, I focus on analytics, analyzing data to offer
+          overseeing a medical education platform`s functionality and content. In the IT department, I focus on analytics, analyzing data to offer
           valuable insights for informed decision-making.
         </p>
       </li>
@@ -64,7 +64,7 @@ const ExpEdItem = () => {
         </span>
         <h3 className='mb-1 text-lg font-semibold text-gray-900 dark:text-white'>Oles Honchar Dnipro National University</h3>
         <time className='block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>sep 2014 - may 2020</time>
-        <p className='text-base font-normal text-gray-500 dark:text-gray-400'>Master's degree in Computer engineering.</p>
+        <p className='text-base font-normal text-gray-500 dark:text-gray-400'>Master`s degree in Computer engineering.</p>
       </li>
     </ol>
   );

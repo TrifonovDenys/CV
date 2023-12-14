@@ -1,16 +1,18 @@
 import { FaGithub, FaTelegramPlane, FaLinkedin } from 'react-icons/fa';
 import img from '../../assets/img/photo_2022-09-27_15-59-45.jpg';
 import cv from '../../assets/img/CV.pdf';
+import { useScrollStore } from '../../zustand/useRerence';
 const Hero = () => {
+  const { blocks, scrollToBlock } = useScrollStore();
   return (
-    <section className='py-12'>
+    <section className='py-12' ref={blocks.block1}>
       <div className='flex flex-col justify-center items-center mb-4'>
         <div className='overflow-hidden rounded-full w-[200px] h-[200px] mb-4 border-4 border-gray-400'>
           <img className=' overflow-hodden' src={img} alt='' />
         </div>
         <p className='text-lg text-center font-medium text-gray-700 dark:text-gray-200'>
-          Hello, I'm Denys, a full-stack developer. I take pleasure in building visually appealing and comprehensive websites, with a particular
-          emphasis on React.js. I'm eager to explore new opportunities in the field.
+          Hello, I`m Denys, a full-stack developer. I take pleasure in building visually appealing and comprehensive websites, with a particular
+          emphasis on React.js. I`m eager to explore new opportunities in the field.
         </p>
       </div>
 
@@ -21,6 +23,7 @@ const Hero = () => {
             <a
               href='https://github.com/TrifonovDenys'
               target='_blank'
+              rel='noreferrer'
               className='text-gray-900 bg-white hover:bg-gray-100 border border-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-full text-sm px-4 py-2 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 '
             >
               <FaGithub size={20} />
@@ -30,6 +33,7 @@ const Hero = () => {
             <a
               href='https://t.me/tryfonovdenys'
               target='_blank'
+              rel='noreferrer'
               className='text-gray-900 bg-white hover:bg-gray-100 border border-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-full text-sm px-4 py-2 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 '
             >
               <FaTelegramPlane size={20} />
@@ -39,6 +43,7 @@ const Hero = () => {
             <a
               href='https://github.com/TrifonovDenys'
               target='_blank'
+              rel='noreferrer'
               className='text-gray-900 bg-white hover:bg-gray-100 border border-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-full text-sm px-4 py-2 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 '
             >
               <FaLinkedin size={20} />

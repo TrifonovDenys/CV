@@ -1,16 +1,18 @@
-import SkillsList from './components/Skills/SkillsList';
-import ContactDrawer from './components/ContactDrawer/ContactDrawer';
-import About from './components/About/About';
 import Navigation from './components/Navigation/Navigation';
-import ExperienceAndEducation from './components/ExperienceAndEducation/ExperienceAndEducation';
-import MyModal from './components/Modal/Modal';
 import Hero from './components/Hero/Hero';
+import About from './components/About/About';
+import SkillsList from './components/Skills/SkillsList';
+import Projects from './components/Projects/Projects';
+import ExperienceAndEducation from './components/ExperienceAndEducation/ExperienceAndEducation';
+import ToggleTheme from './components/Buttons/ToggleTheme';
+import ContactDrawer from './components/ContactDrawer/ContactDrawer';
+import ScrollUp from './components/ScrollUp/ScrollUp';
+import MyModal from './components/Modal/Modal';
 
 import { useSideFormStore } from './zustand/sideForm';
 import { useColorSchemeStore } from './zustand/theme';
 import { useModalStore } from './zustand/useModal';
-import ScrollUp from './components/ScrollUp/ScrollUp';
-import ToggleTheme from './components/Buttons/ToggleTheme';
+
 const App = () => {
   const { currentColorScheme } = useColorSchemeStore();
   const { sideForm } = useSideFormStore();
@@ -26,6 +28,7 @@ const App = () => {
           <Hero />
           <About />
           <SkillsList />
+          <Projects />
           <ExperienceAndEducation />
           <MyModal />
         </main>
