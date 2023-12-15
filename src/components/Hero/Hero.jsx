@@ -1,11 +1,10 @@
 import { FaGithub, FaTelegramPlane, FaLinkedin } from 'react-icons/fa';
 import img from '../../assets/img/photo_2022-09-27_15-59-45.jpg';
 import cv from '../../assets/img/CV.pdf';
-import { useScrollStore } from '../../zustand/useRerence';
+
 const Hero = () => {
-  const { blocks, scrollToBlock } = useScrollStore();
   return (
-    <section className='py-12' ref={blocks.block1}>
+    <section className='py-12'>
       <div className='flex flex-col justify-center items-center mb-4'>
         <div className='overflow-hidden rounded-full w-[200px] h-[200px] mb-4 border-4 border-gray-400'>
           <img className=' overflow-hodden' src={img} alt='' />

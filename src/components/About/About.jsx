@@ -1,8 +1,6 @@
-import { useScrollStore } from '../../zustand/useRerence';
 import Title from '../Title/Title';
 
 const About = () => {
-  const { blocks, scrollToBlock } = useScrollStore();
   return (
     <section className='py-12'>
       <Title title={'about'} />

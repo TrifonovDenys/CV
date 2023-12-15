@@ -1,26 +1,26 @@
 import SubTitle from '../Title/SubTitle';
+import CarouselImg from '../Modal/Carusel';
+
 const ProjectItem = ({ project, index }) => {
-  const { title, description, features, technologies, link, page } = project;
+  const { image, title, description, features, technologies, link, page } = project;
   const even = index % 2 === 0;
   return (
-    <li className={`${even ? 'mr-auto' : 'ml-auto'}`}>
+    <li className={`${even ? 'mr-auto' : 'ml-auto'} w-full mb-4 last:mb-0`}>
       <div
-        className={`flex items-center bg-white border border-gray-200 rounded-lg shadow ${
+        className={`flex justify-between items-center bg-white border border-gray-200 rounded-lg shadow ${
           even ? '' : 'sm:flex-row-reverse'
-        } md:max-w-[630px] hover:bg-gray-100 dark:border-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700`}
+        }  hover:bg-gray-100 dark:border-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700`}
       >
-        <img
-          className='object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg xs:hidden'
-          src='/docs/images/blog/image-4.jpg'
-          alt=''
-        />
-        <div className={`flex flex-col ${even ? 'items-start' : 'items-end'}  justify-between px-6 py-4 leading-normal`}>
+        <div className='w-[30%] h-[300px] overflow-hidden'>
+          <CarouselImg imgArr={image} />
+        </div>
+        <div className={`flex w-[69%] flex-col ${even ? 'items-start' : 'items-end'}  justify-between px-6 py-4 leading-normal`}>
           <SubTitle title={title} />
           <p className={`${even ? 'text-left' : 'text-right'} mb-3 font-normal text-gray-700 dark:text-gray-400`}>{description}</p>
 
-          <ul className='flex gap-y-2 gap-x-3 flex-wrap dark:text-gray-900 text-white mb-4'>
+          <ul className='flex gap-x-3 flex-wrap dark:text-gray-900 text-white mb-4'>
             {features.map((feature, i) => (
-              <li key={i} className={`${even ? 'text-left' : 'text-right'}  font-normal text-gray-700 dark:text-gray-400`}>
+              <li key={i} className={`${even ? 'text-left' : 'text-right'}  font-normal text-gray-700 dark:text-gray-400 capitalize`}>
                 {feature}
               </li>
             ))}

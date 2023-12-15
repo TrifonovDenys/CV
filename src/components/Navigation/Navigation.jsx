@@ -2,15 +2,19 @@ import ContactMe from '../Buttons/ContactMe';
 import Burger from './Svg/Burger';
 import ToggleTheme from '../Buttons/ToggleTheme';
 import { useState } from 'react';
-import { useScrollStore } from '../../zustand/useRerence';
+import { Link } from 'react-scroll';
 
 const Navigation = () => {
   const [mobMebu, isMobMenu] = useState(true);
-  const { blocks, scrollToBlock } = useScrollStore();
 
   const toggleMenu = () => {
     isMobMenu(!mobMebu);
   };
+
+  const handleSetActive = (to) => {
+    console.log(to);
+  };
+
   return (
     <nav className='bg-white dark:bg-gray-800 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600'>
       <div className='max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4 gap-8 '>
@@ -27,49 +31,77 @@ const Navigation = () => {
           </button>
         </div>
         <div className={`items-center justify-between ${mobMebu && 'hidden'} w-full md:flex md:w-auto md:order-1 `} id='navbar-sticky'>
-          <ul className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 dark:border-gray-700'>
+          <ul className='flex flex-col p-0.5 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 dark:border-gray-700'>
             <li>
-              <a
-                onClick={() => scrollToBlock('block1')}
-                href='#'
-                className='block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500'
-                aria-current='page'
+              <Link
+                activeClass='border-red border'
+                to='hero'
+                smooth={true}
+                duration={500}
+                offset={-30}
+                spy={true}
+                onSetActive={handleSetActive}
+                className='cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
               >
                 Hero
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                onClick={() => scrollToBlock('block1')}
-                href='#'
-                className='block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
+              <Link
+                activeClass='border-red border'
+                to='about'
+                smooth={true}
+                duration={500}
+                offset={-30}
+                spy={true}
+                onSetActive={handleSetActive}
+                className='cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href='#'
-                className='block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
-              >
-                Project
-              </a>
-            </li>
-            <li>
-              <a
-                href='#'
-                className='block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
+              <Link
+                activeClass='border-red border'
+                to='skills'
+                smooth={true}
+                duration={500}
+                offset={-30}
+                spy={true}
+                onSetActive={handleSetActive}
+                className='cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
               >
                 Skills
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href='#'
-                className='block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
+              <Link
+                activeClass='border-red border'
+                to='project'
+                smooth={true}
+                duration={500}
+                offset={-30}
+                spy={true}
+                onSetActive={handleSetActive}
+                className='cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
+              >
+                Project
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                activeClass='border-red border'
+                to='experience'
+                smooth={true}
+                duration={500}
+                offset={-30}
+                spy={true}
+                onSetActive={handleSetActive}
+                className='cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
               >
                 Experience
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
