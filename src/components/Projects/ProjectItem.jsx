@@ -1,5 +1,6 @@
 import SubTitle from '../Title/SubTitle';
 import CarouselImg from '../Modal/Carusel';
+import PropTypes from 'prop-types';
 
 const ProjectItem = ({ project, index }) => {
   const { image, title, description, features, technologies, link, page } = project;
@@ -63,3 +64,10 @@ const ProjectItem = ({ project, index }) => {
 };
 
 export default ProjectItem;
+
+// ProjectItem.propTypes = {
+//   project: PropTypes.arrayOf(PropTypes.shape({
+//     image, title, description, features, technologies, link, page,
+//    })).isRequired,
+//   index: PropTypes.string.isRequired,
+// };

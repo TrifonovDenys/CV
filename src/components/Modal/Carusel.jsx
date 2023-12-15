@@ -1,5 +1,6 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
+import PropTypes from 'prop-types';
 
 const CarouselImg = ({ imgArr }) => {
   return (
@@ -13,3 +14,7 @@ const CarouselImg = ({ imgArr }) => {
   );
 };
 export default CarouselImg;
+
+CarouselImg.propTypes = {
+  imgArr: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
