@@ -32,7 +32,7 @@ const projects = [
     features: ['user sign up/sign in/logout', 'update users subscription plan and avatar', 'create/update/deletecontacts', 'filtering and more'],
     technologies: ['Node.JS', 'Express', 'MongoDB', 'Monguse', 'Joi', 'Multer'],
     link: 'https://github.com/TrifonovDenys/nodejs-homework-rest-api',
-    page: '',
+    page: 'zxc',
   },
   {
     title: 'Movie-search',
