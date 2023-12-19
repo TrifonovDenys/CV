@@ -12,7 +12,7 @@ const Navigation = () => {
   };
 
   const handleSetActive = (to) => {
-    console.log(to);
+    // console.log(to);
   };
 
   return (

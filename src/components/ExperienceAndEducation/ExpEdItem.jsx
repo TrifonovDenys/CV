@@ -2,14 +2,74 @@ import ExpSvg from './Svg/ExpSvg';
 import ViewSvg from './Svg/ViewSvg';
 import EdSvg from './Svg/EdSvg';
 import { useModalStore } from '../../zustand/useModal';
+
+import { useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import { useAnimate, usePresence } from 'framer-motion';
 const ExpEdItem = () => {
+  const [isPresent, safeToRemove] = usePresence();
+  const [scope, animate] = useAnimate();
+
+  const item1 = useRef(null);
+  const isInView1 = useInView(item1);
+
+  const item2 = useRef(null);
+  const isInView2 = useInView(item2);
+
+  const item3 = useRef(null);
+  const isInView3 = useInView(item3);
+
+  const item4 = useRef(null);
+  const isInView4 = useInView(item4);
+
+  // useEffect(() => {
+  //   console.log('Element is in view: ', isInView);
+  // }, [isInView,]);
+
+  const isInView = useInView(scope);
+
+  useEffect(() => {
+    if (isInView) {
+      animate('li', { opacity: 1 });
+    }
+    console.log(scope.current);
+  }, [isInView]);
+
+  // useEffect(() => {
+
+  //   if (isPresent) {
+  //     const enterAnimation = async () => {
+  //       await animate(scope.current, { opacity: 1 });
+  //       await animate('li', { opacity: 1, x: 0 });
+  //     };
+  //     enterAnimation();
+  //   } else {
+  //     const exitAnimation = async () => {
+  //       await animate('li', { opacity: 0, x: -100 });
+  //       await animate(scope.current, { opacity: 0 });
+  //       safeToRemove();
+  //     };
+
+  //     exitAnimation();
+  //   }
+  //   console.log('Element is in view: ', isPresent);
+  // }, [isPresent]);
+
   const { toggleModal } = useModalStore();
   return (
-    <ol className='relative border-s border-gray-200 dark:border-gray-700'>
-      <li className='mb-10 ms-6'>
+    <ol ref={scope} className='relative border-s border-gray-200 dark:border-gray-700 '>
+      <li className='mb-10 ms-6 opacity-0'>
         <span className='absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900'>
           <EdSvg />
         </span>
+        {/* <div
+          ref={item1}
+          style={{
+            transform: isInView1 ? 'none' : 'translateX(100px)',
+            opacity: isInView1 ? 1 : 0,
+            transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+          }}
+        > */}
         <h3 className='flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
           IT School GoIT{' '}
           <span className='bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3'>
@@ -32,6 +92,7 @@ const ExpEdItem = () => {
         <span className='absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900'>
           <ExpSvg />
         </span>
+
         <h3 className='mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
           Biostrategy{' '}
           <span className='bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3'>
