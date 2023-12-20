@@ -1,10 +1,20 @@
 import { FaGithub, FaTelegramPlane, FaLinkedin } from 'react-icons/fa';
 import img from '../../assets/img/photo_2022-09-27_15-59-45.jpg';
 import cv from '../../assets/img/CV.pdf';
-
+import { useRef } from 'react';
+import { useInView } from 'framer-motion';
 const Hero = () => {
+  const item = useRef(null);
+  const isInView = useInView(item, { once: true });
   return (
-    <section className='py-12'>
+    <section
+      className='py-12'
+      ref={item}
+      style={{
+        transform: `scale(${isInView ? '1' : '0.5'})`,
+        transition: `all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) `,
+      }}
+    >
       <div className='flex flex-col justify-center items-center mb-4'>
         <div className='overflow-hidden rounded-full w-[200px] h-[200px] mb-4 border-4 border-gray-400'>
           <img className=' overflow-hodden' src={img} alt='' />
