@@ -112,5 +112,5 @@ ProjectItem.propTypes = {
     link: PropTypes.string.isRequired,
     page: PropTypes.string.isRequired,
   }).isRequired,
-  // index: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
 };

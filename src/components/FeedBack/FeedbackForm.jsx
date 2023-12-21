@@ -1,14 +1,33 @@
-import { useForm } from 'react-hook-form';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 
 const FeedbackForm = () => {
-  const {
-    register,
-    handleSubmit,
-    // formState: { errors },
-  } = useForm();
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    const serviceId = 'service_6n7kmkh';
+    const templateId = 'template_4m7qjad';
+    const publicKey = 'We0uDnYjPf5iEk5Tr';
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+      () => {
+        setEmail('');
+        setMessage('');
+        toast.success('Message send successfully!');
+      },
+      (error) => {
+        console.log(error.text);
+        toast.error('Try later please!');
+      },
+    );
+  };
 
   return (
-    <form className='mb-6' onSubmit={handleSubmit((data) => console.log(data))}>
+    <form ref={form} className='mb-6' onSubmit={sendEmail}>
       <div className='mb-6'>
         <label htmlFor='email' className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>
           Your email
@@ -18,21 +37,9 @@ const FeedbackForm = () => {
           id='email'
           className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
           placeholder='name@company.com'
-          {...register('email')}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
-        />
-      </div>
-      <div className='mb-6'>
-        <label htmlFor='subject' className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>
-          Subject
-        </label>
-        <input
-          type='text'
-          id='subject'
-          className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-          placeholder='Let me know how I can help you'
-          required
-          {...register('subject')}
         />
       </div>
       <div className='mb-6'>
@@ -44,7 +51,8 @@ const FeedbackForm = () => {
           rows='4'
           className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
           placeholder='Your message...'
-          {...register('message')}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         ></textarea>
       </div>
       <button

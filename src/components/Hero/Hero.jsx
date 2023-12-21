@@ -1,5 +1,5 @@
 import { FaGithub, FaTelegramPlane, FaLinkedin } from 'react-icons/fa';
-import img from '../../assets/img/photo_2022-09-27_15-59-45.jpg';
+import img from '../../assets/img/photo.jpg';
 import cv from '../../assets/img/CV.pdf';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
@@ -16,8 +16,8 @@ const Hero = () => {
       }}
     >
       <div className='flex flex-col justify-center items-center mb-4'>
-        <div className='overflow-hidden rounded-full w-[200px] h-[200px] mb-4 border-4 border-gray-400'>
-          <img className=' overflow-hodden' src={img} alt='' />
+        <div className='overflow-hidden rounded-full w-[150px] h-[150px] mb-4 border-4 border-gray-400'>
+          <img className='' src={img} alt='' />
         </div>
         <p className='text-lg text-center font-medium text-gray-700 dark:text-gray-200'>
           Hello, I`m Denys, a full-stack developer. I take pleasure in building visually appealing and comprehensive websites, with a particular

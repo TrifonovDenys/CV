@@ -8,12 +8,12 @@ import ToggleTheme from './components/Buttons/ToggleTheme';
 import ContactDrawer from './components/ContactDrawer/ContactDrawer';
 import ScrollUp from './components/ScrollUp/ScrollUp';
 import MyModal from './components/Modal/Modal';
-
 import { motion, useScroll } from 'framer-motion';
 import { useSideFormStore } from './zustand/sideForm';
 import { useColorSchemeStore } from './zustand/theme';
 import { useModalStore } from './zustand/useModal';
 import { Element } from 'react-scroll';
+import { PopUp } from './components/PopUp/PopUp';
 const App = () => {
   const { scrollYProgress } = useScroll();
   const { currentColorScheme } = useColorSchemeStore();
@@ -53,6 +53,7 @@ const App = () => {
         </div>
         <ToggleTheme />
         <ScrollUp />
+        <PopUp />
       </div>
     </>
   );
