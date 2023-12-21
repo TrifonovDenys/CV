@@ -11,10 +11,6 @@ const Navigation = () => {
     isMobMenu(!mobMebu);
   };
 
-  const handleSetActive = (to) => {
-    // console.log(to);
-  };
-
   return (
     <nav className='bg-white dark:bg-gray-800 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600'>
       <div className='max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4 gap-8 '>
@@ -40,7 +36,6 @@ const Navigation = () => {
                 duration={500}
                 offset={-30}
                 spy={true}
-                onSetActive={handleSetActive}
                 className='cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
               >
                 Hero
@@ -54,7 +49,6 @@ const Navigation = () => {
                 duration={500}
                 offset={-30}
                 spy={true}
-                onSetActive={handleSetActive}
                 className='cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
               >
                 About
@@ -68,7 +62,6 @@ const Navigation = () => {
                 duration={500}
                 offset={-30}
                 spy={true}
-                onSetActive={handleSetActive}
                 className='cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
               >
                 Skills
@@ -82,7 +75,6 @@ const Navigation = () => {
                 duration={500}
                 offset={-30}
                 spy={true}
-                onSetActive={handleSetActive}
                 className='cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
               >
                 Project
@@ -97,7 +89,6 @@ const Navigation = () => {
                 duration={500}
                 offset={-30}
                 spy={true}
-                onSetActive={handleSetActive}
                 className='cursor-pointer block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'
               >
                 Experience

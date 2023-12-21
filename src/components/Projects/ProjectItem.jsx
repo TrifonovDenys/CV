@@ -1,11 +1,10 @@
 import SubTitle from '../Title/SubTitle';
 import CarouselImg from '../Modal/Carusel';
-import PropTypes from 'prop-types';
+import PropTypes, { string } from 'prop-types';
 
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
-const ProjectItem = ({ project, index }) => {
-  const { image, title, description, features, technologies, link, page } = project;
+const ProjectItem = ({ project: { image, title, description, features, technologies, link, page }, index }) => {
   const even = index % 2 === 0;
 
   const item = useRef(null);
@@ -28,7 +27,7 @@ const ProjectItem = ({ project, index }) => {
         }  hover:bg-gray-100 dark:border-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700`}
       >
         <div className='w-[30%] h-[300px] '>
-          {image.length > 0 && <CarouselImg imgArr={image} showArrows={false} interval={5000} showIndicators={false} />}
+          {image.length > 0 ? <CarouselImg imgArr={image} showArrows={false} interval={5000} showIndicators={false} /> : <></>}
         </div>
         <div className={`flex w-[69%] flex-col ${even ? 'items-start' : 'items-end'}  justify-between px-6 py-4 leading-normal`}>
           <SubTitle title={title} />
@@ -81,8 +80,37 @@ const ProjectItem = ({ project, index }) => {
 export default ProjectItem;
 
 // ProjectItem.propTypes = {
-//   project: PropTypes.arrayOf(PropTypes.shape({
-//     image, title, description, features, technologies, link, page,
-//    })).isRequired,
+//   project: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       image: PropTypes.arrayOf(string),
+//       title: PropTypes.string.isRequired,
+//       description: PropTypes.string.isRequired,
+//       features: PropTypes.arrayOf(
+//         PropTypes.shape({
+//           map: PropTypes.array.isRequired,
+//         }),
+//       ),
+//       technologies: PropTypes.arrayOf(
+//         PropTypes.shape({
+//           map: PropTypes.array.isRequired,
+//         }),
+//       ),
+//       link: PropTypes.string,
+//       page: PropTypes.string,
+//     }),
+//   ).isRequired,
 //   index: PropTypes.string.isRequired,
 // };
+
+ProjectItem.propTypes = {
+  project: PropTypes.shape({
+    image: PropTypes.arrayOf(string).isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    features: PropTypes.arrayOf(string).isRequired,
+    technologies: PropTypes.arrayOf(string).isRequired,
+    link: PropTypes.string.isRequired,
+    page: PropTypes.string.isRequired,
+  }).isRequired,
+  // index: PropTypes.string.isRequired,
+};

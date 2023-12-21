@@ -1,6 +1,7 @@
 import ExpSvg from './Svg/ExpSvg';
 import ViewSvg from './Svg/ViewSvg';
 import EdSvg from './Svg/EdSvg';
+import PropTypes from 'prop-types';
 
 import { useModalStore } from '../../zustand/useModal';
 import { useRef } from 'react';
@@ -51,3 +52,16 @@ const ExpEdItem = ({ item }) => {
 };
 
 export default ExpEdItem;
+
+ExpEdItem.propTypes = {
+  item: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      period: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      status: PropTypes.bool.isRequired,
+      work: PropTypes.bool.isRequired,
+      aditionBtn: PropTypes.bool.isRequired,
+    }),
+  ).isRequired,
+};

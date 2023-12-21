@@ -26,4 +26,5 @@ export default SkillItem;
 
 SkillItem.propTypes = {
   skill: PropTypes.string.isRequired,
+  wait: PropTypes.number.isRequired,
 };
