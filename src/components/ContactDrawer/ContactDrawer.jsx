@@ -1,5 +1,5 @@
 import { useSideFormStore } from '../../zustand/sideForm';
-import FeedbackForm from '../FeedBack/feedbackForm';
+import FeedbackForm from '../FeedBack/FeedbackForm';
 import LetterSvg from './Svg/LetterSvg';
 import CrossSvg from './Svg/CrossSvg';
 
