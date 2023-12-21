@@ -5,7 +5,7 @@ import mimino1 from '../assets/img/projects/mimino-home.png';
 import mimino2 from '../assets/img/projects/mimino-hotel.png';
 import mimino3 from '../assets/img/projects/mimino-restaurant.png';
 
-import bookshelf1 from '../assets/img/projects/bookshelf-home.PNG';
+import bookshelf1 from '../assets/img/projects/bookshelf-home.png';
 import bookshelf2 from '../assets/img/projects/bookshelf-favorite.png';
 
 import drinks1 from '../assets/img/projects/drinks-home.png';
