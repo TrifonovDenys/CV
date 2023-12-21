@@ -14,7 +14,9 @@ import { useColorSchemeStore } from './zustand/theme';
 import { useModalStore } from './zustand/useModal';
 import { Element } from 'react-scroll';
 import { PopUp } from './components/PopUp/PopUp';
+
 const App = () => {
+  
   const { scrollYProgress } = useScroll();
   const { currentColorScheme } = useColorSchemeStore();
   const { sideForm } = useSideFormStore();

@@ -2,7 +2,7 @@
   "name": "cv",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://TryfonovDenys.github.io/cv/",
+  "homepage": "https://TrifonovDenys.github.io/cv/",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,8 +10,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "email": "email dev --dir src/emails"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
