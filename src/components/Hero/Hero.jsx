@@ -1,6 +1,6 @@
 import { FaGithub, FaTelegramPlane, FaLinkedin } from 'react-icons/fa';
-import img from '../../assets/img/photo.jpg';
-import cv from '../../assets/img/CV.pdf';
+import img from '../../../public/img/photo.jpg';
+import cv from '../../../public/img/CV.pdf';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 const Hero = () => {
