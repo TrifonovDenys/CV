@@ -26,10 +26,10 @@ const ProjectItem = ({ project: { image, title, description, features, technolog
           even ? '' : 'sm:flex-row-reverse'
         }  hover:bg-gray-100 dark:border-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700`}
       >
-        <div className='w-[30%] h-[300px] '>
+        <div className='w-[30%] h-[300px] hidden md:block'>
           {image.length > 0 ? <CarouselImg imgArr={image} showArrows={false} interval={5000} showIndicators={false} /> : <></>}
         </div>
-        <div className={`flex w-[69%] flex-col ${even ? 'items-start' : 'items-end'}  justify-between px-6 py-4 leading-normal`}>
+        <div className={`flex md:w-[69%] flex-col ${even ? 'items-start' : 'items-end'}  justify-between px-6 py-4 leading-normal`}>
           <SubTitle title={title} />
           <p className={`${even ? 'text-left' : 'text-right'} mb-3 font-normal text-gray-700 dark:text-gray-400`}>{description}</p>
 

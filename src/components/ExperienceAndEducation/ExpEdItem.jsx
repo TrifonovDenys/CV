@@ -23,7 +23,7 @@ const ExpEdItem = ({ item }) => {
       <div
         ref={item1}
         style={{
-          transform: isInView ? 'none' : 'translateX(100px)',
+          transform: isInView ? 'none' : 'translateY(100px)',
           opacity: isInView ? 1 : 0,
           transition: 'all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1)',
         }}

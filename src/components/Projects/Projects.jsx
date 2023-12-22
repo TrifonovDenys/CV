@@ -4,7 +4,7 @@ import ProjectItem from './ProjectItem';
 import projects from '../../data/projects';
 const Projects = () => {
   return (
-    <section className='py-12'>
+    <section className='py-12' name='projects'>
       <Title title={'my projects'} />
       <ul className='flex flex-wrap flex-row-reverse'>
         {projects.map((project, index) => (
