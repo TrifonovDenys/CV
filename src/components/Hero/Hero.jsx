@@ -1,8 +1,10 @@
+import img from '../../assets/img/photo.jpg';
+import cv from '../../assets/img/CV.pdf';
+
 import { FaGithub, FaTelegramPlane, FaLinkedin } from 'react-icons/fa';
-import img from '../../../public/img/photo.jpg';
-import cv from '../../../public/img/CV.pdf';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
+
 const Hero = () => {
   const item = useRef(null);
   const isInView = useInView(item, { once: true });

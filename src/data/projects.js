@@ -1,22 +1,22 @@
-import markup1 from '../../public/img/projects/markup-home.png';
-import markup2 from '../../public/img/projects/markup-portfolio.png';
+import markup1 from '../assets/img/projects/markup-home.png';
+import markup2 from '../assets/img/projects/markup-portfolio.png';
 
-import mimino1 from '../../public/img/projects/mimino-home.png';
-import mimino2 from '../../public/img/projects/mimino-hotel.png';
-import mimino3 from '../../public/img/projects/mimino-restaurant.png';
+import mimino1 from '../assets/img/projects/mimino-home.png';
+import mimino2 from '../assets/img/projects/mimino-hotel.png';
+import mimino3 from '../assets/img/projects/mimino-restaurant.png';
 
-import bookshelf1 from '../../public/img/projects/bookshelf-home.png';
-import bookshelf2 from '../../public/img/projects/bookshelf-favorite.png';
+import bookshelf1 from '../assets/img/projects/bookshelf-home.png';
+import bookshelf2 from '../assets/img/projects/bookshelf-favorite.png';
 
-import drinks1 from '../../public/img/projects/drinks-home.png';
-import drinks2 from '../../public/img/projects/drinks.png';
-import drinks3 from '../../public/img/projects/drink-add.png';
+import drinks1 from '../assets/img/projects/drinks-home.png';
+import drinks2 from '../assets/img/projects/drinks.png';
+import drinks3 from '../assets/img/projects/drink-add.png';
 
-import restAPI from '../../public/img/projects/rest-api.png';
+import restAPI from '../assets/img/projects/rest-api.png';
 
-import img1 from '../../public/img/certificate_page-1.jpg';
-import img2 from '../../public/img/certificate_page-2.jpg';
-import img3 from '../../public/img/certificate_page-3.jpg';
+import img1 from '../assets/img/certificate_page-1.jpg';
+import img2 from '../assets/img/certificate_page-2.jpg';
+import img3 from '../assets/img/certificate_page-3.jpg';
 
 const projects = [
   {
