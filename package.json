@@ -2,7 +2,7 @@
   "name": "cv",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://TrifonovDenys.github.io/cv/",
+  "homepage": "https://trifonovdenys.github.io/cv/",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -44,6 +44,18 @@
     "tailwindcss": "^3.3.6",
     "prop-types": "^15.8.1",
     "vite": "^5.0.0"
+  },
+    "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "author": "Tryfonov Denys <trifonowden123@gmail.com>"
 }
