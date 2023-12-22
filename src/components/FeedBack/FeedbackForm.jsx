@@ -13,6 +13,12 @@ const FeedbackForm = () => {
     const serviceId = 'service_6n7kmkh';
     const templateId = 'template_4m7qjad';
     const publicKey = 'We0uDnYjPf5iEk5Tr';
+
+    const templateParams = {
+      email_from: email,
+      message_try: message,
+    };
+    console.dir(form.current);
     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
       () => {
         setEmail('');
