@@ -4,11 +4,9 @@ import { devtools } from 'zustand/middleware'
 
 export const useSideFormStore = create(
   persist(
-    devtools((set) => ({
+    (set) => ({
       sideForm: false,
       toggleSideForm: () => set(({ sideForm }) => ({ sideForm: !sideForm })),
-    }), {
-      name: 'sideForm',
     }),
     {
       name: 'sideForm',

@@ -4,7 +4,7 @@ import { devtools } from 'zustand/middleware';
 
 export const useColorSchemeStore = create(
   persist(
-    devtools(
+    
       (set) => ({
         currentColorScheme: localStorage.getItem('color-scheme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'),
         toggleColorScheme: () => {
@@ -13,10 +13,6 @@ export const useColorSchemeStore = create(
           }));
         },
       }),
-      {
-        name: 'theme',
-      },
-    ),
     {
       name: 'theme',
       version: 1,
