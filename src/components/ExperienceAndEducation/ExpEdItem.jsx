@@ -2,15 +2,13 @@ import ExpSvg from './Svg/ExpSvg';
 import ViewSvg from './Svg/ViewSvg';
 import EdSvg from './Svg/EdSvg';
 import PropTypes from 'prop-types';
-
 import { useModalStore } from '../../zustand/useModal';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 
 const ExpEdItem = ({ item }) => {
-  const { title, period, description, status, work, aditionBtn } = item;
-
-  const { toggleModal } = useModalStore();
+  const { title, period, description, status, work, aditionBtn, sertificate } = item;
+  const { openModal } = useModalStore();
 
   const item1 = useRef(null);
   const isInView = useInView(item1);
@@ -40,7 +38,7 @@ const ExpEdItem = ({ item }) => {
         <p className='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>{description}</p>
         {aditionBtn && (
           <button
-            onClick={toggleModal}
+            onClick={() => openModal(title, sertificate)}
             className='inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700'
           >
             <ViewSvg /> View certificate

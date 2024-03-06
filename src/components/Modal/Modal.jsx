@@ -1,16 +1,16 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import { useModalStore } from '../../zustand/useModal';
-import { certificatePages } from '../../data/projects';
+
 import CarouselImg from './Carusel';
 
 export default function MyModal() {
-  const { modal, toggleModal } = useModalStore();
+  const { title, modal, content, closeModal } = useModalStore();
 
   return (
     <>
       <Transition appear show={modal} as={Fragment}>
-        <Dialog as='div' className='relative z-10' onClose={toggleModal}>
+        <Dialog as='div' className='relative z-10' onClose={() => closeModal()}>
           <Transition.Child
             as={Fragment}
             enter='ease-out duration-300'
@@ -36,12 +36,12 @@ export default function MyModal() {
               >
                 <Dialog.Panel className='relative w-full max-w-md transform overflow-hidden rounded-2xl bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 p-6 text-left align-middle shadow-xl transition-all'>
                   <Dialog.Title as='h3' className='flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
-                    GoIT certificate
+                    {title}
                   </Dialog.Title>
-                  <CarouselImg imgArr={certificatePages} />
+                  <CarouselImg imgArr={content} />
                   <div className='absolute flex top-5 right-6  justify-between items-center'>
                     <kbd
-                      onClick={toggleModal}
+                      onClick={() => closeModal()}
                       className=' cursor-pointer px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500'
                     >
                       Esc

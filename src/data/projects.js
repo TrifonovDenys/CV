@@ -14,10 +14,6 @@ import drinks3 from '../assets/img/projects/drink-add.png';
 
 import restAPI from '../assets/img/projects/rest-api.png';
 
-import img1 from '../assets/img/certificate_page-1.jpg';
-import img2 from '../assets/img/certificate_page-2.jpg';
-import img3 from '../assets/img/certificate_page-3.jpg';
-
 const projects = [
   {
     title: 'Drink Master',
@@ -86,5 +82,4 @@ const projects = [
   },
 ];
 
-export const certificatePages = [img1, img2, img3];
 export default projects;

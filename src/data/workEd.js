@@ -1,4 +1,20 @@
+import certIt1 from '../assets/img/certificate_page-1.jpg';
+import certIt2 from '../assets/img/certificate_page-2.jpg';
+import certIt3 from '../assets/img/certificate_page-3.jpg';
+
+import certEng1 from '../assets/img/green-forest_1.png';
+import certEng2 from '../assets/img/green-forest_1.png';
+
 const workEd = [
+  {
+    title: 'Green Forest',
+    period: 'Intermediate/B1 English Course | feb 24',
+    description: 'St',
+    status: true,
+    work: false,
+    aditionBtn: true,
+    sertificate: [certEng1, certEng2],
+  },
   {
     title: 'IT School GoIT',
     period: 'Fullstack Developer | jan 23',
@@ -7,6 +23,7 @@ const workEd = [
     status: true,
     work: false,
     aditionBtn: true,
+    sertificate: [certIt1, certIt2, certIt3],
   },
   {
     title: 'Biostrategy',
