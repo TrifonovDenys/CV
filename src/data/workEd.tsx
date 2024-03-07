@@ -5,11 +5,36 @@ import certIt3 from '../assets/img/certificate_page-3.jpg';
 import certEng1 from '../assets/img/green-forest_1.png';
 import certEng2 from '../assets/img/green-forest_1.png';
 
-const workEd = [
+const certIt1Image: HTMLImageElement = new Image();
+certIt1Image.src = certIt1;
+
+const certIt2Image: HTMLImageElement = new Image();
+certIt2Image.src = certIt2;
+
+const certIt3Image: HTMLImageElement = new Image();
+certIt3Image.src = certIt3;
+
+const certEng1Image: HTMLImageElement = new Image();
+certEng1Image.src = certEng1;
+
+const certEng2Image: HTMLImageElement = new Image();
+certEng2Image.src = certEng2;
+
+interface WorkEd {
+  title: String,
+  period: String,
+  description: String,
+  status: Boolean,
+  work: Boolean,
+  aditionBtn: Boolean,
+  sertificate: String[] | false
+}
+
+const workEd: WorkEd[] = [
   {
     title: 'Green Forest',
     period: 'Intermediate/B1 English Course | feb 24',
-    description: 'St',
+    description: 'Learn English till proficiency in all four language skills (reading, writing, speaking, and listening) is achieved.',
     status: true,
     work: false,
     aditionBtn: true,
@@ -33,6 +58,7 @@ const workEd = [
     status: true,
     work: true,
     aditionBtn: false,
+    sertificate: false,
   },
   {
     title: 'PC-Service',
@@ -42,6 +68,7 @@ const workEd = [
     status: false,
     work: true,
     aditionBtn: false,
+    sertificate: false,
   },
   {
     title: 'Oles Honchar Dnipro National University',
@@ -50,6 +77,7 @@ const workEd = [
     status: false,
     work: false,
     aditionBtn: false,
+    sertificate: false,
   },
 ];
 
