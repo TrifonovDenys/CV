@@ -16,6 +16,6 @@
     "target": "es2019",
     "sourceMap": true
   },
-  "include": ["./src/**/*.tsx"],
+  "include": ["./src/**/*.tsx", "src/data/workEd.ts"],
   "exclude": ["dist", "build", "node_modules"]
 }

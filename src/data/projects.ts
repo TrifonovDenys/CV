@@ -1,23 +1,10 @@
-import markup1 from '../assets/img/projects/markup-home.png';
-import markup2 from '../assets/img/projects/markup-portfolio.png';
+import {img} from './imgs'
+import  {Project}  from '../types/interfaces'
 
-import mimino1 from '../assets/img/projects/mimino-home.png';
-import mimino2 from '../assets/img/projects/mimino-hotel.png';
-import mimino3 from '../assets/img/projects/mimino-restaurant.png';
-
-import bookshelf1 from '../assets/img/projects/bookshelf-home.png';
-import bookshelf2 from '../assets/img/projects/bookshelf-favorite.png';
-
-import drinks1 from '../assets/img/projects/drinks-home.png';
-import drinks2 from '../assets/img/projects/drinks.png';
-import drinks3 from '../assets/img/projects/drink-add.png';
-
-import restAPI from '../assets/img/projects/rest-api.png';
-
-const projects = [
+const projects: Project[] = [
   {
     title: 'Drink Master',
-    image: [drinks1, drinks2, drinks3],
+    image: [img.drinks1, img.drinks2, img.drinks3],
     description:
       'Drink Master is the frontend component of a full-stack project developed by a group of junior full-stack developers as their final course project. ',
     features: ['Create Your Own Drink', 'Drink Collection', 'Profile Customization'],
@@ -27,7 +14,7 @@ const projects = [
   },
   {
     title: 'Rest-API',
-    image: [restAPI],
+    image: [img.restAPI],
     description: 'List of functionalities related to user authentication, profile management, contact operations, and additional features.',
     features: ['user sign up/sign in/logout', 'update users subscription plan and avatar', 'create/update/deletecontacts', 'filtering and more'],
     technologies: ['Node.JS', 'Express', 'MongoDB', 'Monguse', 'Joi', 'Multer'],
@@ -54,7 +41,7 @@ const projects = [
   // },
   {
     title: 'Bookshelf',
-    image: [bookshelf1, bookshelf2],
+    image: [img.bookshelf1, img.bookshelf2],
     description: 'The website enables users to browse an extensive collection of books, add them to a favorite`s page',
     features: ['Categories of Book', 'Favorite Books', 'User Profile'],
     technologies: ['JavaScript', 'Html', 'Css'],
@@ -63,7 +50,7 @@ const projects = [
   },
   {
     title: 'MIMINO',
-    image: [mimino1, mimino2, mimino3],
+    image: [img.mimino1, img.mimino2, img.mimino3],
     description:
       'Mimino is a platform where you can reserve a table for a specific number of people or book apartments in a hotel, including 2 to 3-bedroom options.',
     features: ['Book A Room', 'Book A Table', 'View The Menu', 'View Location'],
@@ -73,7 +60,7 @@ const projects = [
   },
   {
     title: 'Web Studio',
-    image: [markup1, markup2],
+    image: [img.markup1, img.markup2],
     description: 'Simple HTML and CSS project.',
     features: ['Information about company', 'Features', 'Team', 'Clients', 'Portfolio Page'],
     technologies: ['Html', 'Css'],
